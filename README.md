@@ -69,7 +69,7 @@ NotifyWind(title=title, message=message)
 
 - ### 获取`pushplus`的token：
 
-前往官网：https://www.pushplus.plus/push1.html。注册，绑定微信公众号，实名，即可获取到token。
+前往官网：[pushplus官网](https://www.pushplus.plus/push1.html)。注册、绑定微信公众号、实名，短短几分钟即可获取到token。
 
 - ### 获取`gotify`的token：
 
