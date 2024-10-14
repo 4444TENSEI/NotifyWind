@@ -3,7 +3,7 @@
 <p align="center"><img src="https://testingcf.jsdelivr.net/gh/4444TENSEI/CDN/img/avatar/AngelDog/AngelDog-rounded.png" alt="Logo"
     width="200" height="200"/></p>
 <h1 align="center">NotifyWind</h1>
-<h4 align="center">专为Python云函数定时脚本/任务提供的便捷集成消息推送SDK。例如你可以将自己的Python脚本部署到云函数上，然后集成本项目SDK，定时运行服务(器)监控、定时查成绩、定时签到、定时请求某个接口后，将运行状态直接发送微信or系统通知到你的手机上查看。</h4>
+<h4 align="center">专为Python云函数定时脚本/任务提供的消息推送集成SDK。例如你可以将自己的Python脚本部署到云函数上，然后集成本项目SDK，定时运行服务(器)监控、定时查成绩、定时签到、定时请求某个接口后，将运行状态直接发送微信or系统通知到你的手机上查看。</h4>
 <p align="center">
 <img src="https://img.shields.io/badge/Python-276DC3?style=for-the-badge&logo=python&logoColor=white" />
 </p>    
@@ -12,13 +12,11 @@
 
 > ## 简介
 
-### 本项目SDK实现目的：为Python云函数定时任务集成便捷的消息推送接口，实现无成本、稳定的通知推送，简易集成而无需重构已部署的项目。
-
-本项目集成目前主流的消息服务接口，轻量且配置简便。对于未了解过`云函数`的人简单解释：让你的各种任务例如发起各种接口请求，稳定运行在大厂服务器上（可定时）。无个人服务器性能开销，因为不需要在你自己的服务器上运行！集成了这个便捷的消息推送SDK，你不再需要去翻冗长的运行日志，时刻从手机APP上查看通知推送，时刻监控服务、任务运行状态。
+本SDK目前集成了三个主流的消息服务接口，配置简易。对于未了解过`云函数`的用户做个简单解释：云函数允许你的各种任务稳定运行在大厂服务器上（可定时）。无个人服务器性能开销，因为不需要在你自己的服务器上运行！集成了这个便捷的消息推送SDK，你不再需要去翻冗长的运行日志，时刻从手机APP上被动接收通知推送，从而监控服务、任务运行状态。
 
 > ## 应用实例
 
-1. ### 本项目v0.1.0版本已集成于：[由云函数实现的HTTP服务定时监控+消息推送定时任务](https://github.com/4444TENSEI/NotifyMonitor)
+1. ### v0.1.0版本已集成于：[由云函数实现的HTTP服务定时监控+消息推送定时任务](https://github.com/4444TENSEI/NotifyMonitor)
 
 
 ### 目前支持的推送服务：
