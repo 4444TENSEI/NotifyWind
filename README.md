@@ -3,16 +3,17 @@
 <p align="center"><img src="https://testingcf.jsdelivr.net/gh/4444TENSEI/CDN/img/avatar/AngelDog/AngelDog-rounded.png" alt="Logo"
     width="200" height="200"/></p>
 <h1 align="center">NotifyWind</h1>
-<h4 align="center">专为Python云函数定时脚本/任务提供的消息推送集成SDK。例如你可以将自己的Python脚本部署到云函数上，然后集成本项目SDK，定时运行服务(器)监控、定时查成绩、定时签到、定时请求某个接口后，将运行状态直接发送微信or系统通知到你的手机上查看。</h4>
+<h4 align="center">Python统一消息推送服务集成工具，皆在便捷集成第三方/开源自部署消息推送服务。例如你将自己的Python脚本集成本项目SDK，定时运行服务(器)监控、定时查成绩、定时签到、定时任务后，将运行状态直接发送微信or系统通知到你的手机上查看。</h4>
 <p align="center">
 <img src="https://img.shields.io/badge/Python-276DC3?style=for-the-badge&logo=python&logoColor=white" />
 </p>    
 
 
 
+
 > ## 简介
 
-本SDK目前集成了三个主流的消息服务接口，配置简易。对于未了解过`云函数`的用户做个简单解释：云函数允许你的各种任务稳定运行在大厂服务器上（可定时）。无个人服务器性能开销，因为不需要在你自己的服务器上运行！集成了这个便捷的消息推送SDK，你不再需要去翻冗长的运行日志，时刻从手机APP上被动接收通知推送，从而监控服务、任务运行状态。
+本SDK现已集成4个主流的消息服务（微信公众号pushplus、企业微信机器人、Gotify、ntfy）接口，配置简易、本体轻量，无需通过pip安装，只需clone本仓库至您的项目根目录下，修改根目录的`config.NotifyWind.json`配置文件为您的推送服务环境变量，引入推送函数即可一次性推送消息至多平台。
 
 > ## 应用实例
 
@@ -39,18 +40,28 @@ NotifyWind(title=title, message=message)
 
 ## 环境变量/配置文件
 
-支持**同时推送**到多平台，下方示例中仅使用pushplus，实际还有ntfy和gotify的配置项，参考本仓库根目录下的`notifywind.example.json`
+支持**同时推送**到多平台，下方示例中仅使用pushplus，实际还有ntfy和gotify的配置项，参考本仓库根目录下的`config.NotifyWind.json.example`
 
-配置信息中，顶级键需要有一个`NotifyWind`，目的是为了**方便后续集成**到需要消息推送的Python个人项目配置文件（json）
+更推荐使用`环境变量`方式，而不是写在实际配置文件中（开发环境还是需要使用本地json文件，自行去除项目根目录的`config.NotifyWind.json.example`的`.example`后缀即可，可自行删除不需要的推送服务键值对）。
 
-当然最推荐的还是使用`环境变量`的方式，而无需写到实际文件中（开发环境还是需要使用本地json文件，可以自行把项目根目录的`notifywind.example.json`改名为`notifywind.json`）。
-
-```
+```json
 {
-    "NotifyWind": {
-        "pushplus": {
-            "token": "xxxxxxxxxxxxxxxxxxxx"
-        }
+    "pushplus": {
+        "token": "xxxxxxxxxxxxxxxxxxxx"
+    },
+    "ntfy": {
+        "server_url": "https://xxxxxx.com",
+        "token": "xxxxxxxxxxxxxxxxxxxx",
+        "priority": 4
+    },
+    "gotify": {
+        "server_url": "https://xxxxxx.com/message",
+        "token": "xxxxxxxxxxxxxxxxxxxx",
+        "priority": 8
+    },
+    "wechat": {
+        "server_url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxx"
+    }
 }
 ```
 
