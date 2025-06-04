@@ -1,0 +1,19 @@
+{
+    "pushplus": {
+        "token": "xxxxxxxxxxxxxxxxxxxx"
+    },
+    "ntfy": {
+        "server_url": "https://xxxxxx.com",
+        "token": "xxxxxxxxxxxxxxxxxxxx",
+        "priority": 4
+    },
+    "gotify": {
+        "server_url": "https://xxxxxx.com/message",
+        "token": "xxxxxxxxxxxxxxxxxxxx",
+        "priority": 8
+    },
+    "wechat": {
+        "server_url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxx"
+    },
+    "debug": true
+}
