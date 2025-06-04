@@ -42,7 +42,7 @@ NotifyWind(title=title, message=message)
 
 支持**同时推送**到多平台，下方示例中仅使用pushplus，实际还有ntfy和gotify的配置项，参考本仓库根目录下的`config.NotifyWind.json.example`
 
-更推荐使用`环境变量`方式，而不是写在实际配置文件中（开发环境还是需要使用本地json文件，自行去除项目根目录的`config.NotifyWind.json.example`的`.example`后缀即可，可自行删除不需要的推送服务键值对）。
+更推荐使用`环境变量`方式，而不是写在实际配置文件中（开发环境还是需要使用本地json文件，自行去除项目根目录的`config.NotifyWind.json.example`的`.example`后缀即可，可自行删除不需要的推送服务键值对，此处debug控制调试语句不要删除）。
 
 ```json
 {
@@ -61,7 +61,8 @@ NotifyWind(title=title, message=message)
     },
     "wechat": {
         "server_url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxx"
-    }
+    },
+    "debug": true
 }
 ```
 
